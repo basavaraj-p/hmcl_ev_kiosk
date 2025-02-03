@@ -1,0 +1,23 @@
+.box-style {
+    display: flex;
+    background-image:
+        linear-gradient(159.02deg, #0f123b 14.25%, #090d2e 56.45%, #020515 86.14%);
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+}
+
+.box-style::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./noise.svg");
+    background-repeat: repeat;
+    opacity: 0.1;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+

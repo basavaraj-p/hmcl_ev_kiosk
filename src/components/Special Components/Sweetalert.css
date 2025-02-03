@@ -1,0 +1,104 @@
+/* Import a custom font (example using Google Fonts) */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+
+/* Apply the font family to all text in the modal */
+.swal2-popup {
+    font-family: 'T-Star Pro Regular';
+    font-style: normal;
+    /* font-weight: normal; */
+    background: linear-gradient(180deg, #1a1f4d 0%, #23284f 50%, #2d3154 100%);
+}
+
+/* Style for the title */
+.swal2-title {
+    color: white;
+    /* Green color for the title */
+    font-weight: 700;
+    /* Bold font weight */
+}
+
+/* Style for the content text */
+.swal2-html-container {
+    color: #ffffff !important;
+    /* White color for better contrast on dark background */
+    font-size: 1.1em;
+    /* Slightly larger font size */
+}
+
+/* Style for the icon */
+.swal2-icon.swal2-success {
+    border-color: #4CAF50;
+    /* Green border for success icon */
+    color: #4CAF50;
+    /* Green color for success icon */
+}
+
+.swal2-icon.swal2-error {
+    border-color: #e31a1a !important;
+    /* Red border for error icon */
+    color: #e31a1a !important;
+    /* Red color for error icon */
+}
+
+.swal2-icon.swal2-warning {
+    border-color: #ffc107;
+    /* Yellow border for warning icon */
+    color: #ffc107;
+    /* Yellow color for warning icon */
+}
+
+.swal2-icon.swal2-info {
+    border-color: #2196f3;
+    /* Blue border for info icon */
+    color: #2196f3;
+    /* Blue color for info icon */
+}
+
+.swal2-icon.swal2-question {
+    border-color: #9c27b0;
+    /* Purple border for question icon */
+    color: #9c27b0;
+    /* Purple color for question icon */
+}
+
+/* Style for the confirm button */
+.swal2-confirm {
+    background-color: #0075ff !important;
+    /* Green background */
+    color: white !important;
+    /* White text */
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 10px 24px !important;
+    font-size: 1em !important;
+    font-weight: 700 !important;
+    font-family: 'T-Star Pro Bold' !important;
+    /* Bold font weight */
+    text-transform: uppercase !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.swal2-confirm:hover {
+    background-color: #3993fe !important;
+    /* Darker green on hover */
+}
+
+/* Style for the cancel button (if needed) */
+.swal2-cancel {
+    background-color: #f44336 !important;
+    /* Red background */
+    color: white !important;
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 10px 24px !important;
+    font-family: 'T-Star Pro Bold' !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    text-transform: uppercase !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.swal2-cancel:hover {
+    background-color: #d32f2f !important;
+    /* Darker red on hover */
+}

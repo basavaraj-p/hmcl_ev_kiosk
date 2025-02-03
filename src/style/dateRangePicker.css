@@ -1,0 +1,206 @@
+/* Main container */
+.rdrDateRangeWrapper {
+    background-color: #f0f0f0 !important;
+    /* border-radius: 8px !important; */
+    /* padding: 20px !important; */
+}
+
+/* Left side list options */
+.rdrDefinedRangesWrapper {
+    background-color: transparent !important;
+    /* border-right: 5px solid black !important; */
+    color: whitesmoke;
+    font-family: 'T-Star Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    /* border-radius: 1px !important; */
+}
+
+.rdrStaticRangeLabel {
+    color: whitesmoke !important;
+    font-family: 'T-Star Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    background: linear-gradient(180deg, #1a1f4d 0%, #23284f 50%, #2d3154 100%) !important;
+}
+
+.rdrStaticRange:hover .rdrStaticRangeLabel {
+    background: #0075ff !important;
+}
+
+/* Calendar container */
+.rdrCalendarWrapper {
+    background-color: transparent !important;
+    border-radius: 8px !important;
+    color: whitesmoke !important;
+    font-family: 'T-Star Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Month dropdown */
+.rdrMonthAndYearWrapper {
+    background-color: transparent !important;
+    padding: 10px !important;
+    font-family: 'T-Star Pro Regular' !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+}
+
+.rdrMonthAndYearPickers select {
+    background-color: #ffffff !important;
+    /* border: 1px solid #d0d0d0 !important; */
+    border-radius: 4px !important;
+    font-family: 'T-Star Pro Bold';
+    font-style: normal;
+    font-weight: normal;
+    color: black !important;
+}
+
+/* Navigation arrows */
+.rdrNextPrevButton {
+    background-color: #0075ff !important;
+}
+
+.rdrNextPrevButton:hover {
+    background-color: #d0d0d0 !important;
+}
+
+/* Weekday headers */
+.rdrWeekDays {
+    font-weight: bold !important;
+    color: whitesmoke !important;
+}
+
+/* Date cells */
+.rdrDay {
+    color: whitesmoke !important;
+}
+
+/* Target day numbers specifically */
+.rdrDayNumber span {
+    color: whitesmoke !important;
+}
+
+/* Styles for days outside the current month */
+.rdrDayPassive .rdrDayNumber span {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Today's date */
+.rdrDayToday .rdrDayNumber span {
+    color: whitesmoke !important;
+}
+
+.rdrDayToday .rdrDayNumber span:after {
+    background-color: white !important;
+}
+
+.rdrDayStartPreview,
+.rdrDayEndPreview,
+.rdrDayInPreview {
+    background-color: transparent;
+    color: white !important;
+    border-color: white !important;
+}
+
+.rdrDayStartOfMonth .rdrDayNumber,
+.rdrDayEndOfMonth .rdrDayNumber {
+    color: #0075ff !important;
+    /* border-radius: 10% !important; */
+}
+
+/* Selected date range */
+.rdrStartEdge,
+.rdrEndEdge,
+.rdrInRange {
+    color: #ffffff !important;
+    background-color: #0075ff !important;
+    border-radius: 10px;
+}
+
+.rdrDayStartOfWeek .rdrDayNumber,
+.rdrDayEndOfWeek .rdrDayNumber{
+        color: #ffffff !important;
+            background-color: transparent !important;
+            border-radius: 10px;
+}
+
+/* Selected date range
+.rdrDayStartOfWeek .rdrDayNumber,
+.rdrDayEndOfWeek .rdrDayNumber,
+.rdrStartEdge,
+.rdrEndEdge,
+.rdrInRange {
+    color: #ffffff !important;
+    background-color: #0075ff !important;
+} */
+
+.rdrStartEdge .rdrDayNumber span,
+.rdrEndEdge .rdrDayNumber span {
+    color: #ffffff !important;
+}
+
+.rdrDayStartOfWeek .rdrInRange,
+.rdrDayEndOfWeek .rdrInRange {
+    background-color: #0075ff !important;
+}
+
+/* Hover effect */
+.rdrDay:not(.rdrDayPassive):hover .rdrDayNumber span {
+    color: whitesmoke !important;
+    /* background-color: rgba(0, 117, 255, 0.1) !important; */
+    border-radius: 50% !important;
+}
+
+/* Input boxes for start and end dates */
+.rdrDateDisplayWrapper {
+    background-color: transparent !important;
+    border-radius: 8px !important;
+    margin-bottom: 10px !important;
+}
+
+.rdrDateDisplay {
+    margin: 0 !important;
+}
+
+.rdrDateDisplayItem {
+    background-color: whitesmoke !important;
+    /* border: 1px solid #d0d0d0 !important; */
+    border-radius: 4px !important;
+}
+
+.rdrDateDisplayItem input {
+    color: black !important;
+    font-family: 'T-Star Pro Bold';
+    font-style: normal;
+    font-weight: normal;
+}
+
+.rdrDateDisplayItemActive {
+    border-color: black !important;
+}
+
+/* Month name in the calendar header */
+.rdrMonthName {
+    color: #0075ff !important;
+    font-family: 'T-Star Pro Bold';
+    font-style: normal;
+    font-weight: normal;
+    /* Change this to your desired color */
+}
+
+/* Weekday headers */
+.rdrWeekDays {
+    font-weight: bold !important;
+    font-family: 'T-Star Pro Bold';
+    font-style: normal;
+    /* font-weight: normal; */
+}
+
+/* Individual weekday names */
+.rdrWeekDay {
+    color: #0075ff !important;
+    /* Change this to your desired color */
+}

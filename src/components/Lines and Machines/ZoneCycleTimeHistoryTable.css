@@ -1,0 +1,13 @@
+.filter-card-container {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    /* margin-bottom: 10px; */
+}
+
+.filter-card-container.show {
+    max-height: 500px;
+    /* Adjust this value based on your FilterCard's height */
+    opacity: 1;
+}
