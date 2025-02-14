@@ -107,7 +107,7 @@ const ConsolidatedLosses = () => {
       try {
         const Id = 1;
         const response = await axios.get(
-          `http://localhost:7000/api/v1/sop-stopage-reason/consolidate-loss`,
+          `https://hmcl-backend.onrender.com/api/v1/sop-stopage-reason/consolidate-loss`,
           {
             params: {
               lossid: Id,
@@ -129,7 +129,7 @@ const ConsolidatedLosses = () => {
       if (showUnfilledFilter) CLId = 1;
       try {
         const response2 = await axios.get(
-          "http://localhost:7000/api/v1/sop-stopage-reason/count2",
+          "https://hmcl-backend.onrender.com/api/v1/sop-stopage-reason/count2",
           {
             params: {
               defaultId: CLId,
@@ -151,19 +151,19 @@ const ConsolidatedLosses = () => {
     const fetchData = async () => {
       try {
         const unitResponse = await axios.get(
-          "http://localhost:7000/api/v1/bd/unit"
+          "https://hmcl-backend.onrender.com/api/v1/bd/unit"
         );
         // console.log("unitResponse ", unitResponse.data.result)
         setUnitCode(unitResponse.data.result);
 
         const phenomenonResponse = await axios.get(
-          "http://localhost:7000/api/v1/bd/phenomena"
+          "https://hmcl-backend.onrender.com/api/v1/bd/phenomena"
         );
         // console.log("phenomenonResponse ", phenomenonResponse.data.result)
         setPhenomenonCode(phenomenonResponse.data.result);
 
         const causeResponse = await axios.get(
-          "http://localhost:7000/api/v1/bd/cause"
+          "https://hmcl-backend.onrender.com/api/v1/bd/cause"
         );
         // console.log("causeResponse ", causeResponse.data.result)
         setCauseCode(causeResponse.data.result);
@@ -416,7 +416,7 @@ const ConsolidatedLosses = () => {
       // );
       // console.log("submit capture breakdown reasons  ", breakdownReasonForm);
       const response = await axios.post(
-        "http://localhost:7000/api/v1/bd/event",
+        "https://hmcl-backend.onrender.com/api/v1/bd/event",
         {
           breakdownReasonForm: breakdownReasonForm,
         }

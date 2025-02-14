@@ -138,7 +138,7 @@ const WMConsoleCard = () => {
   async function fetchAssets() {
     try {
       const result = await axios.get(
-        "http://localhost:7000/api/v1/sop-rejection-rework/fetch-assets"
+        "https://hmcl-backend.onrender.com/api/v1/sop-rejection-rework/fetch-assets"
       );
       return result;
     } catch (error) {
@@ -150,7 +150,7 @@ const WMConsoleCard = () => {
   async function fetchDataZoneWise() {
     try {
       const result = await axios.post(
-        "http://localhost:7000/api/v1/sop-weeklymaintenance/zone",
+        "https://hmcl-backend.onrender.com/api/v1/sop-weeklymaintenance/zone",
         {
           month: localMonth,
           zone: localZone,
@@ -167,7 +167,7 @@ const WMConsoleCard = () => {
   // async function fetchDataMachineWise() {
   //   try {
   //     const result = await axios.post(
-  //       "http://localhost:7000/api/v1/sop-weeklymaintenance/zone-machine",
+  //       "https://hmcl-backend.onrender.com/api/v1/sop-weeklymaintenance/zone-machine",
   //       {
   //         month: localMonth,
   //         zone: localZone,

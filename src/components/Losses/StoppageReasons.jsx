@@ -189,7 +189,7 @@ const StoppageReasons = () => {
     if (updateStoppageData.lossid != "" && updateStoppageData.reason != "") {
       try {
         const response = await fetch(
-          "http://localhost:7000/api/v1/sop-stopage-reason/update",
+          "https://hmcl-backend.onrender.com/api/v1/sop-stopage-reason/update",
           {
             method: "POST",
             headers: {
@@ -251,7 +251,7 @@ const StoppageReasons = () => {
 
       try {
         response = await axios.get(
-          `http://localhost:7000/api/v1/sop-stopage-reason/count2`,
+          `https://hmcl-backend.onrender.com/api/v1/sop-stopage-reason/count2`,
           {
             params: {
               defaultId: Id,

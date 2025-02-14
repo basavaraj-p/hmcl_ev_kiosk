@@ -140,7 +140,7 @@ const LTFilterCard = () => {
       // );
       try {
         const response = await axios.post(
-          `http://localhost:7000/api/v1/defect/lookup`,
+          `https://hmcl-backend.onrender.com/api/v1/defect/lookup`,
           {
             params: { machine: localMachine, defect_type: dropdown },
           }
@@ -266,7 +266,7 @@ const LTFilterCard = () => {
 
       try {
         response = await axios.put(
-          `http://localhost:7000/api/v1/leak-test/update`,
+          `https://hmcl-backend.onrender.com/api/v1/leak-test/update`,
           {
             params: {
               defect_type: dropdown,
@@ -381,7 +381,7 @@ const LTFilterCard = () => {
       // console.log("In try");
 
       try {
-        response = await axios.post(`http://localhost:7000/api/v1/leak-test`, {
+        response = await axios.post(`https://hmcl-backend.onrender.com/api/v1/leak-test`, {
           params: {
             date: {
               startDate: localDateRange[0].startDate,

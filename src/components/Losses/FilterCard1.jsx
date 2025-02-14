@@ -102,7 +102,7 @@ const FilterCard = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:7000/api/v1/sop-cycletime/data2"
+          "https://hmcl-backend.onrender.com/api/v1/sop-cycletime/data2"
         );
         // console.log("reponse in filter 1 ", response.data.data);
         setMachineZone(response.data.data);

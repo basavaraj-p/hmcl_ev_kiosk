@@ -97,7 +97,7 @@ const FilterCard = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:7000/api/v1/sop-cycletime/data"
+          "https://hmcl-backend.onrender.com/api/v1/sop-cycletime/data"
         );
         const [machineMap, zoneArray] = getUniqueValues(response.data.data);
         setMachines(machineMap);

@@ -46,7 +46,7 @@ const ShiftsSchedulerTable = ({ setTableRefresh, tableRefresh }) => {
   const fetchData = async () => {
     try {
       const shiftSchedules = await axios.get(
-        "http://localhost:7000/api/v1/sop-shifts/shift-schedules"
+        "https://hmcl-backend.onrender.com/api/v1/sop-shifts/shift-schedules"
       );
       setTableData(shiftSchedules.data.rowData);
     } catch (error) {
@@ -103,7 +103,7 @@ const ShiftsSchedulerTable = ({ setTableRefresh, tableRefresh }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:7000/api/v1/sop-shifts/shift-delete-schedule",
+        "https://hmcl-backend.onrender.com/api/v1/sop-shifts/shift-delete-schedule",
         {
           scheduleid: scheduleid,
         }
@@ -121,7 +121,7 @@ const ShiftsSchedulerTable = ({ setTableRefresh, tableRefresh }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:7000/api/v1/sop-shifts-history/create-shift-history-on-delete",
+        "https://hmcl-backend.onrender.com/api/v1/sop-shifts-history/create-shift-history-on-delete",
         {
           adid: adid,
           scheduledate: scheduledate,

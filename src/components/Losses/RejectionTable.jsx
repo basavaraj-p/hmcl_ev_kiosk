@@ -42,10 +42,10 @@ const RejectionTable = (refresh, setRefresh) => {
     try {
       const [rejectionResponse, assetResponse] = await Promise.all([
         axios.get(
-          "http://localhost:7000/api/v1/sop-rejection-rework/fetch-rejection-reworks"
+          "https://hmcl-backend.onrender.com/api/v1/sop-rejection-rework/fetch-rejection-reworks"
         ),
         axios.get(
-          "http://localhost:7000/api/v1/sop-rejection-rework/fetch-assets"
+          "https://hmcl-backend.onrender.com/api/v1/sop-rejection-rework/fetch-assets"
         ),
       ]);
       setTableData(rejectionResponse.data.rowData);

@@ -30,7 +30,7 @@ const ZoneCycleTimeTable = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:7000/api/v1/sop-cycletime/data"
+          "https://hmcl-backend.onrender.com/api/v1/sop-cycletime/data"
         );
         // console.log("Fetched data:", response.data);
         setTableData(response.data.data);
@@ -62,7 +62,7 @@ const ZoneCycleTimeTable = () => {
     if (!editingRow) return;
 
     try {
-      await axios.post("http://localhost:7000/api/v1/sop-cycletime/update", {
+      await axios.post("https://hmcl-backend.onrender.com/api/v1/sop-cycletime/update", {
         machineshortname: editingRow.machineshortname,
         cycletime: parseFloat(editCycletime),
       });

@@ -64,7 +64,7 @@ const ShiftBreaks = ({ handleShowDialog, showDialog }) => {
   const fetchData = async () => {
     try {
       const breaks = await axios.get(
-        "http://localhost:7000/api/v1/sop-shifts/shift-breaks"
+        "https://hmcl-backend.onrender.com/api/v1/sop-shifts/shift-breaks"
       );
       // console.log("breaks : ", breaks.data.rowData);
       const currentShiftId = shifts[0].shiftid;
@@ -195,7 +195,7 @@ const ShiftBreaks = ({ handleShowDialog, showDialog }) => {
       // console.log("tableData.length : ",tableData.length);
 
       await axios.post(
-        "http://localhost:7000/api/v1/sop-shifts/shift-update-breaks",
+        "https://hmcl-backend.onrender.com/api/v1/sop-shifts/shift-update-breaks",
         {
           shiftid: shifts[0].shiftid,
           breakstart: convertTimeVanilla(startTime),
@@ -204,7 +204,7 @@ const ShiftBreaks = ({ handleShowDialog, showDialog }) => {
         }
       );
       await axios.post(
-        "http://localhost:7000/api/v1/sop-shifts-history/create-shift-break-history",
+        "https://hmcl-backend.onrender.com/api/v1/sop-shifts-history/create-shift-break-history",
         {
           adid: adid,
           shiftid: shifts[0].shiftid,
@@ -239,13 +239,13 @@ const ShiftBreaks = ({ handleShowDialog, showDialog }) => {
 
       if (result.isConfirmed) {
         await axios.post(
-          "http://localhost:7000/api/v1/sop-shifts/shift-delete-breaks",
+          "https://hmcl-backend.onrender.com/api/v1/sop-shifts/shift-delete-breaks",
           {
             breakid: row.original.breakid,
           }
         );
         await axios.post(
-          "http://localhost:7000/api/v1/sop-shifts-history/create-shift-break-history",
+          "https://hmcl-backend.onrender.com/api/v1/sop-shifts-history/create-shift-break-history",
           {
             adid: adid,
             shiftid: row.original.shiftid,

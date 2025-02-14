@@ -99,10 +99,10 @@ const RejectionCard2 = ({ refresh, setRefresh }) => {
     try {
       const [defectResponse, rejectionReworksResponse] = await Promise.all([
         axios.get(
-          "http://localhost:7000/api/v1/sop-rejection-rework/fetch-defects"
+          "https://hmcl-backend.onrender.com/api/v1/sop-rejection-rework/fetch-defects"
         ),
         axios.get(
-          "http://localhost:7000/api/v1/sop-rejection-rework/fetch-rejection-reworks"
+          "https://hmcl-backend.onrender.com/api/v1/sop-rejection-rework/fetch-rejection-reworks"
         ),
       ]);
       setDefectData(defectResponse.data.rowData);
@@ -115,7 +115,7 @@ const RejectionCard2 = ({ refresh, setRefresh }) => {
   // async function checkBarcodes(barcodes, localMachine) {
   //   try {
   //     const result = axios.post(
-  //       "http://localhost:7000/api/v1/sop-rejection-rework/check-barcodes",
+  //       "https://hmcl-backend.onrender.com/api/v1/sop-rejection-rework/check-barcodes",
   //       {
   //         barcodes,
   //         machine: localMachine,
@@ -201,7 +201,7 @@ const RejectionCard2 = ({ refresh, setRefresh }) => {
 
     try {
       await axios.post(
-        "http://localhost:7000/api/v1/sop-rejection-rework/create-rejection-rework",
+        "https://hmcl-backend.onrender.com/api/v1/sop-rejection-rework/create-rejection-rework",
         {
           adid,
           barcodes,

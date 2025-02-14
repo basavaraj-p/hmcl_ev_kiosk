@@ -36,7 +36,7 @@ const ZoneCycleTimeHistoryTable = ({ showFilter }) => {
   async function fetchFilteredCycletimes(startDate, endDate) {
     try {
       const response = await axios.get(
-        "http://localhost:7000/api/v1/sop-cycletime/filtered",
+        "https://hmcl-backend.onrender.com/api/v1/sop-cycletime/filtered",
         {
           params: {
             startDate,

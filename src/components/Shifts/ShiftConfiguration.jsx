@@ -25,7 +25,7 @@ const ShiftConfiguration = () => {
     const fetchData = async () => {
       try {
         const shifts = await axios.get(
-          "http://localhost:7000/api/v1/sop-shifts/shifts"
+          "https://hmcl-backend.onrender.com/api/v1/sop-shifts/shifts"
         );
         setTableData(shifts.data.rowData);
         dispatch(setShifts([shifts.data.rowData[0]]));

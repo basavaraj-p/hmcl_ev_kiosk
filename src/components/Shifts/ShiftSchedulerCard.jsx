@@ -104,10 +104,10 @@ const ShiftSchedulerCard = ({ setTableRefresh, tableRefresh }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:7000/api/v1/sop-cycletime/data"
+          "https://hmcl-backend.onrender.com/api/v1/sop-cycletime/data"
         );
         const response2 = await axios.get(
-          "http://localhost:7000/api/v1/sop-shifts/shifts"
+          "https://hmcl-backend.onrender.com/api/v1/sop-shifts/shifts"
         );
         const [machineMap, zoneArray] = getUniqueValues(response.data.data);
         setZones(zoneArray);
@@ -240,7 +240,7 @@ const ShiftSchedulerCard = ({ setTableRefresh, tableRefresh }) => {
 
     try {
       await axios.post(
-        "http://localhost:7000/api/v1/sop-shifts/schedule-shifts",
+        "https://hmcl-backend.onrender.com/api/v1/sop-shifts/schedule-shifts",
         {
           dateRange: localDateRange,
           zone: localZone,
@@ -259,7 +259,7 @@ const ShiftSchedulerCard = ({ setTableRefresh, tableRefresh }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:7000/api/v1/sop-shifts/schedule-shifts-existing",
+        "https://hmcl-backend.onrender.com/api/v1/sop-shifts/schedule-shifts-existing",
         {
           dateRange: localDateRange,
           zones: localZone,
@@ -279,7 +279,7 @@ const ShiftSchedulerCard = ({ setTableRefresh, tableRefresh }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:7000/api/v1/sop-shifts-history/create-shift-history",
+        "https://hmcl-backend.onrender.com/api/v1/sop-shifts-history/create-shift-history",
         {
           adid: adid,
           dateRange: localDateRange,

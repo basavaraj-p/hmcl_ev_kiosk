@@ -94,10 +94,10 @@ const SBHFilterCard = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:7000/api/v1/sop-cycletime/data"
+          "https://hmcl-backend.onrender.com/api/v1/sop-cycletime/data"
         );
         const response2 = await axios.get(
-          "http://localhost:7000/api/v1/sop-shifts/shifts"
+          "https://hmcl-backend.onrender.com/api/v1/sop-shifts/shifts"
         );
         const [machineMap, zoneArray] = getUniqueValues(response.data.data);
         setZones(zoneArray);
@@ -179,7 +179,7 @@ const SBHFilterCard = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:7000/api/v1/sop-shifts-history/get-shift-break-history",
+        "https://hmcl-backend.onrender.com/api/v1/sop-shifts-history/get-shift-break-history",
         {
           dateRange: localDateRange,
           shifts: localShift,

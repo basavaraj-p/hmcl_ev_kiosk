@@ -85,14 +85,14 @@ const Dashboard = () => {
         stopageReasonResponseTotal,
         shiftHighLights,
       ] = await Promise.all([
-        axios.get("http://localhost:7000/api/v1/sop-alarm/today-count"),
+        axios.get("https://hmcl-backend.onrender.com/api/v1/sop-alarm/today-count"),
         axios.get(
-          "http://localhost:7000/api/v1/sop-stopage-reason/today-count"
+          "https://hmcl-backend.onrender.com/api/v1/sop-stopage-reason/today-count"
         ),
-        axios.get("http://localhost:7000/api/v1/sop-alarm/count"),
-        axios.get("http://localhost:7000/api/v1/sop-stopage-reason/count"),
+        axios.get("https://hmcl-backend.onrender.com/api/v1/sop-alarm/count"),
+        axios.get("https://hmcl-backend.onrender.com/api/v1/sop-stopage-reason/count"),
         axios.get(
-          "http://localhost:7000/api/v1/sop-shifts/fetch-shift-highlights"
+          "https://hmcl-backend.onrender.com/api/v1/sop-shifts/fetch-shift-highlights"
         ),
       ]);
 
@@ -153,7 +153,7 @@ const Dashboard = () => {
       }
 
       await axios.post(
-        "http://localhost:7000/api/v1/sop-shifts/create-shift-highlights",
+        "https://hmcl-backend.onrender.com/api/v1/sop-shifts/create-shift-highlights",
         { reason: shiftHighlights }
       );
       await fetchData(); // Refetch data after insertion
