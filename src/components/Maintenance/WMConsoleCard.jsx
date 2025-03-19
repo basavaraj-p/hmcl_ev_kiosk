@@ -253,7 +253,7 @@ const WMConsoleCard = () => {
           alignItems: "center",
           padding: "10px",
           borderRadius: "15px",
-          width: screenSize < 150 ? "75%" : "auto",
+          width: "auto",
           background: "rgba(15, 18, 59, 0.2)",
           boxShadow: "0 2px 8px rgba(0, 0, 0, 0.9)",
         }}

@@ -68,7 +68,7 @@ const MTBFGraph = ({ graphData, graphDetails, status }) => {
       textStyle: tooltipStyle,
     },
     legend: {
-      data: ["mtbf", "Target mtbf"],
+      data: ["MTBF", "Target MTBF"],
       top: 0,
       textStyle: {
         ...commonFontStyle,
@@ -124,7 +124,7 @@ const MTBFGraph = ({ graphData, graphDetails, status }) => {
     },
     series: [
       {
-        name: "mtbf",
+        name: "MTBF",
         type: "line",
         data: mtbfData,
         symbol: "circle",
@@ -138,7 +138,7 @@ const MTBFGraph = ({ graphData, graphDetails, status }) => {
         },
       },
       {
-        name: "Target mtbf",
+        name: "Target MTBF",
         type: "line",
         data: mtbfConstantData,
         symbol: "circle",

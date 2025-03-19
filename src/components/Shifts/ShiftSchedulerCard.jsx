@@ -317,7 +317,7 @@ const ShiftSchedulerCard = ({ setTableRefresh, tableRefresh }) => {
           alignItems: "center",
           padding: "10px",
           borderRadius: "15px",
-          width: screenSize < 150 ? "60%" : "auto",
+          width: "auto",
           background: "rgba(15, 18, 59, 0.2)",
           boxShadow: "0 2px 8px rgba(0, 0, 0, 0.9)",
         }}
