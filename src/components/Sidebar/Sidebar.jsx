@@ -9,7 +9,7 @@ import {
   Collapse,
   IconButton,
   Tooltip,
-  Divider
+  Divider,
 } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -22,6 +22,7 @@ import Herologo from "/favicon.ico";
 import vidaLogo from "/vida_logo.jpeg";
 import vidaLogo2 from "/vida_white_logo_croped.png";
 import vidaLogo3 from "/vida_orange_logo_croped.png";
+import senseopsLogo from "/ourlogo.png";
 
 const Sidebar = ({ routes }) => {
   const [open, setOpen] = useState({});
@@ -34,14 +35,11 @@ const Sidebar = ({ routes }) => {
     const currentPath = location.pathname;
     const currentRoute =
       routes.find((route) => route.route === currentPath) ||
-      routes.find((route) =>
-        route.subcomponent?.some((sub) => sub.route === currentPath)
-      );
+      routes.find((route) => route.subcomponent?.some((sub) => sub.route === currentPath));
     if (currentRoute) {
       setSelected(
         currentRoute.route ||
-          currentRoute.subcomponent?.find((sub) => sub.route === currentPath)
-            ?.route
+          currentRoute.subcomponent?.find((sub) => sub.route === currentPath)?.route
       );
     }
   }, [location, routes]);
@@ -86,11 +84,7 @@ const Sidebar = ({ routes }) => {
     color: isSelected ? "" : "white",
     ...(isSubItem ? fonts.fontStyle2 : fonts.fontStyle1), // Apply different font styles
     "& .MuiTypography-root": {
-      ...(isSelected
-        ? fonts.fontStyle1
-        : isSubItem
-        ? fonts.fontStyle5
-        : fonts.fontStyle1),
+      ...(isSelected ? fonts.fontStyle1 : isSubItem ? fonts.fontStyle5 : fonts.fontStyle1),
       fontSize: isSubItem ? "0.9rem" : "1rem",
     },
     display: isMinimized ? "none" : "block",
@@ -118,8 +112,7 @@ const Sidebar = ({ routes }) => {
       sx={{
         ...listItemStyle(selected === route.route),
         ...(isSubItem && !isMinimized && { pl: 2 }),
-      }}
-    >
+      }}>
       <Tooltip title={isMinimized ? route.name : ""} placement="right">
         <ListItemButton
           component={route.onClick ? "button" : Link}
@@ -133,11 +126,8 @@ const Sidebar = ({ routes }) => {
             }
           }}
           selected={selected === route.route}
-          sx={listItemButtonStyle(selected === route.route)}
-        >
-          <ListItemIcon sx={listItemIconStyle(selected === route.route)}>
-            {route.icon}
-          </ListItemIcon>
+          sx={listItemButtonStyle(selected === route.route)}>
+          <ListItemIcon sx={listItemIconStyle(selected === route.route)}>{route.icon}</ListItemIcon>
           <ListItemText
             primary={route.name}
             sx={listItemTextStyle(selected === route.route, isSubItem)}
@@ -149,8 +139,7 @@ const Sidebar = ({ routes }) => {
                 e.stopPropagation();
                 handleClick(route.name);
               }}
-              size="small"
-            >
+              size="small">
               {open[route.name] ? (
                 <ExpandLessIcon style={{ color: "white" }} />
               ) : (
@@ -183,8 +172,7 @@ const Sidebar = ({ routes }) => {
           ),
           transition: "width 0.2s",
         },
-      }}
-    >
+      }}>
       <List>
         <ListItem
           style={{
@@ -197,32 +185,27 @@ const Sidebar = ({ routes }) => {
             fontWeight: fonts.fontStyle7["font-weight"],
             fontSize: "1.25rem",
             // padding:"0"
-          }}
-        >
+          }}>
           {isMinimized ? (
-            <img
-              src={vidaLogo}
-              height={"30px"}
-              width={"30px"}
-              style={{ margin: "5px" }}
-            />
+            <img src={senseopsLogo} height={"30px"} width={"30px"} style={{ margin: "5px" }} />
           ) : (
-            <div>
-              <img
+            <div style={{ display: "flex", alignContent: "center", justifyContent: "center" }}>
+              {/* <img
                 src={vidaLogo3}
                 height={"30px"}
                 width={"100px"}
-                style={{ paddingRight: "10px",borderRight:"1px solid white" }}
-              />
+                style={{ paddingRight: "10px", borderRight: "1px solid white" }}
+              /> */}
+              <span>SENSEOPS</span>
               {/* <Divider
                 orientation="vertical"
                 flexItem
                 style={{ backgroundColor: "whitesmoke" }}
               /> */}
               <img
-                src={Herologo}
+                src={senseopsLogo}
                 height={"30px"}
-                width={"30px"}
+                width={"40px"}
                 style={{ marginLeft: "10px" }}
               />
             </div>
@@ -251,15 +234,9 @@ const Sidebar = ({ routes }) => {
           <React.Fragment key={route.name}>
             {renderListItem(route)}
             {route.subcomponent && (
-              <Collapse
-                in={!isMinimized && open[route.name]}
-                timeout="auto"
-                unmountOnExit
-              >
+              <Collapse in={!isMinimized && open[route.name]} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                  {route.subcomponent.map((subRoute) =>
-                    renderListItem(subRoute, true)
-                  )}
+                  {route.subcomponent.map((subRoute) => renderListItem(subRoute, true))}
                 </List>
               </Collapse>
             )}

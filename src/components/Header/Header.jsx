@@ -183,7 +183,7 @@ const Header = () => {
               // padding:"0"
             }}
           >
-            EV BPA KIOSK
+            EV KIOSK
           </div>
         </Grid>
 
