@@ -57,7 +57,7 @@ In this screen, all the machines which have stopped for whatever reason are tabu
 ### 6. Maintenance
 
 #### 6.1. MTTR and MTBF
-In this screen there is a console card at the top and 3 graphs below. The console card consists of 3 dropdowns with which the year, month, and zone can be selected. Based on the selected values the graphs will render the respective data. The graphs are as follows:
+In this screen there is a console card at the top and 3 graphs below. The console card consists of 3 dropdowns with which the year, month, and zone can be selected. Based on the selected values the graphs will render the respective data.*(For this sample select the month of January 2025 and the option "3.1" in the Zones dropdown)* The graphs are as follows:
 
 a. **Uptime Graph:** This graph contains 2 bars and a y-axis on the left and 2 lines and a y-axis on the right. BD Minutes represents the total amount of time the machines in that particular zone were in breakdown state. BD numbers represent the total amount of breakdowns encountered by all the machines for that particular zone in that month and year. Uptime Variable represents the total run time of the machines in the zone after subtracting the breakdown time. Uptime Constant time represents the total run time of the machine if they did not enter into a breakdown state.
 
